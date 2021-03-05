@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+
+* {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+	text-decoration: none;
+}
+
+html, body{
+	background-color: #fcfcfc;
+}
+
+#container{
+	max-width: 100%;
+	height: 100vh;
+	}
+
+/*BARRA DE NAVEGACIÓN*/
+
+nav{
+	width: 100%;
+	display: inline-flex; 
+	justify-content: space-around;
+	flex-wrap: wrap;
+	position: fixed;
+	background-color: transparent;
+	font-size: 20px;
+	font-family: 'Merriweather', serif;
+	z-index: 1;
+}
+
+nav img{
+	width: 185px;
+	height: 80px;
+	filter: drop-shadow(10px 10px 10px #ffffff);
+}
+
+nav ul{
+	display: inline-flex;
+	align-items: baseline;
+	margin-top: 30px;
+}
+
+nav ul li a{
+	color: #000000;
+}
+
+nav ul li{
+	padding: 15px;
+}
+
+.dropbtn, nav ul li a{
+ 	text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #ffffff, 0 0 20px #ffffff, 0 0 25px #ffffff, 0 0 30px #ffffff, 0 0 35px #ffffff;
+}
+
+/*DROPDOWN MENU*/ 
+
+.dropdown{
+	display: inline-block;
+}
+
+.arrow-down-wrapper{
+	height: 25px;
+	margin-left: 5px;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.dropbtn{
+	cursor: pointer;
+}
+
+.dropdown-content{
+	display: none;
+	position: absolute;
+}
+
+.dropdown-content a{
+	color: #000000;
+	padding: 15px 25px 15px 15px;
+	display: block;
+}
+
+.dropdown-content a:hover{
+	background-color: black;
+	opacity: 0.8;
+	cursor: pointer;
+}
+
+.dropdown:hover .dropdown-content{
+	display: block;
+}
+
+/* FIN DROPDOWN MENU*/ 
+
+.socialig{
+	width: 24px;
+	height: 22px;
+	filter: drop-shadow(5px 5px 5px #ffffff);
+}
+
+.socialbe{
+	width: 32px; 
+	height: 22px;
+	filter: drop-shadow(5px 5px 5px #ffffff);
+}
+
+.socialln{
+	width: 23px;
+	height: 23px;
+	filter: drop-shadow(5px 5px 5px #ffffff);
+}
+
+.socialgh{
+	width: 24px;
+	height: 23px;
+	filter: drop-shadow(5px 5px 5px #ffffff);
+}
+
+/*PAGINA PRINCIPAL*/
+
+main{
+	padding-top: 30px;
+}
+
+/*CSS GRID*/
+
+.gallery{
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: auto;
+	font-family: Arial, Helvetica, sans-serif;
+	width: 80%;
+	height: 100%;
+	margin: auto;
+	padding: 100px;
+}
+
+.sobre_mi_img{
+	grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 7;
+}
+
+.yop1{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.sobre_mi_h1{
+	grid-column-start: 7;
+    grid-column-end: 13;
+    grid-row-start: 1;
+	grid-row-end: 1;
+	color: #000;
+	font-family: 'Merriweather', serif;
+	
+}
+
+.sobre_mi_txt{
+	grid-column-start: 7;
+	grid-column-end: 12;
+	grid-row-start: 2;
+	grid-row-end: 5;
+	font-size: 17px;
+	text-align: left;
+	font-family: 'Merriweather', serif;
+}
+
+.volver{
+	color: black;
+	font-family: 'Merriweather', serif;
+	font-size: 18px;
+	text-align: center;
+	padding: 10px 15px;
+	border-radius: 10px;
+	border: 2px solid black;
+	grid-column-start: 10;
+	grid-column-end: 12;
+	grid-row-start: 6;
+	grid-row-end: 7;
+}
+
+.volver:hover{
+	transition: 0.5s ease;
+	-webkit-box-shadow: 0px 0px 11px 4px rgb(0, 0, 0);
+	-moz-box-shadow: 0px 0px 11px 4px rgb(71, 67, 67);
+	box-shadow: 5px 5px 5px 0px rgb(0, 0, 0);
+
+}
+
+@media screen and (max-width: 1024px){
+	.gallery{
+		width: 100%;
+		height: 100%;
+		padding: 100px 0px 100px 0px;
+	}
+	.volver{
+		font-size: 13px;
+	}
+	.sobre_mi_txt{
+		font-size: 14px;
+	}
+}
+
+@media screen and (max-width: 425px){
+	.sobre_mi_img{
+		grid-column-start: 1;
+		grid-column-end: 13;
+		grid-row-start: 1;
+		grid-row-end: 7;
+	}
+	.sobre_mi_h1{
+		margin: 15px 0px 0px 10px;
+		grid-column-start: 1;
+		grid-column-end: 13;
+		grid-row-start: 7;
+		grid-row-end: 8;
+		color: #000
+	}
+	
+	.sobre_mi_txt{
+		margin: 0px 10px 0px 10px;
+		grid-column-start: 1;
+		grid-column-end: 13;
+		grid-row-start: 8;
+		grid-row-end: 10;
+		font-size: 16px;
+		text-align: left;
+	}
+	.volver{
+		font-size: 13px;
+		text-align: center;
+		border-radius: 5px;
+		border: 2px solid black;
+		grid-column-start: 8;
+		grid-column-end: 12;
+		grid-row-start: 12;
+		grid-row-end: 12;
+	}
+}
+
+/* FOOTER */ 
+
+footer{
+	height: 180px;
+	width: 100%;
+	margin-top: 5px;
+	background-color: black;
+	display: inline-flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.footer-ig{
+	width: 100px;
+	height: 95px;
+	padding: 15px;
+}
+
+.footer-be{
+	width: 145px;
+	height: 95px;
+	padding: 15px;
+}
+
+.footer-ln{
+	width: 100px;
+	height: 95px;
+	padding: 15px;
+}
+
+.footer-gh{
+	width: 95px;
+	height: 95px;
+	padding: 15px;
+}	
+
+.mail{
+	color: white;
+	letter-spacing: 2px;
+	font-size: 20px;
+	font-family: 'Merriweather', serif;
+}
+
+
+/*MEDIA QUERIES*/
+/*1024*/
+
+
+@media screen and (min-width: 1025px){
+    .icono-menu, .cont-menu{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+	nav{
+	font-family: 'Merriweather', serif;
+	}
+
+	.menuprincipal{
+		display: none;
+	}
+
+	.logo{
+		width: 140px;
+		height: 60px;
+		flex-grow: 4;
+		margin-left: 20px;
+	}
+
+ 	.icono-menu{
+		margin: 35px 40px;
+		z-index: 10;
+	}
+	
+	.icono-menu img{
+		width: 25px;
+		height: 40px;
+		cursor: pointer;
+	}
+
+	/*Estilos para el contenedor del menú*/
+
+	.cont-menu{
+		background-color: rgb(42, 42, 42);
+		box-shadow: 2px 0px 5px 2px rgb(66, 66, 66);
+		width: 200px;
+		height: 100vh;
+		position: absolute;
+		top: 0;
+		left: 0;
+		transition: all .5s ease;
+	}
+
+	.cont-menu img{
+		filter: none;
+	}
+
+	/*Estilos para agregar en JS*/
+	
+	.active{
+		transform: translate(-600px);
+	}
+	.opacity{
+		background-color: rgba(0, 0, 0, 0.5);
+		transition: all .5s ease;
+	}
+
+	/*Estilos para el listado del menú*/
+
+	.cont-menu ul{
+		flex-direction: column;
+		padding: 100px 0px 20px 0px;
+		list-style: none;
+	}
+	.cont-menu ul li{
+		color: white;
+		display: block;
+		font-size: 25px;
+		text-decoration: none;
+		padding: 10px 40px;
+		cursor: pointer;
+	}
+	.cont-menu ul li:hover{
+		background-color: rgb(228, 228, 228);
+		color: rgb(42, 42, 42);
+	}
+
+	.visitame{
+		font-size: 10px;
+	}
+	.arrow-left{
+		width: 10px;
+	}
+	.mail{
+		font-size: 13px;
+	}
+
+	.footer-ig{
+		width: 25px;
+		height: 25px;
+		padding: 10px;
+	}
+	
+	.footer-be{
+		width: 40px;
+		height: 25px;
+		padding: 10px;
+	}
+	
+	.footer-ln{
+		width: 25px;
+		height: 25px;
+		padding: 10px;
+	}
+	
+	.footer-gh{
+		width: 25px;
+		height: 25px;
+		padding: 10px;
+	}	
+}
